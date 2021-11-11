@@ -5,7 +5,7 @@ const sgMail = require("../services/sendgrid")
 const router = express.Router()
 
 router.post("/api/mail", async (req, res)  => {
-    const {to, subject, text, html, sandboxMode = false} = req.body;
+    const {to, subject, text, html} = req.body;
 
     const msg = {
         to,
@@ -13,11 +13,6 @@ router.post("/api/mail", async (req, res)  => {
         subject,
         text,
         html,
-        mail_settings: {
-           sandbox_mode: {
-               enable: sandboxMode
-           } 
-        }
     };
 
     try{

@@ -8,7 +8,6 @@
     "dev": "nodemon index.js",
     "test": "jest --verbose ./routes"
   },
-
   "jest": {
     "testEnviroment": "node"
   },
@@ -17,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
