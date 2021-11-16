@@ -5,14 +5,14 @@ const sgMail = require("../services/sendgrid")
 const router = express.Router()
 
 router.post("/api/mail", async (req, res)  => {
-    const {to, subject, text, html} = req.body;
+    const {to, text, template_id} = req.body;
 
     const msg = {
         to,
         from: "auntap.ort@gmail.com",
-        subject,
+        subject: "Gracias por registrarte",
         text,
-        html,
+        template_id,
     };
 
     try{
